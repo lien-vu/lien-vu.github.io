@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,8 +32,8 @@ jobs:
 
       - name: Build
         env:
-          # Ensure Vite generates correct paths for GitHub Pages subpath
-          BASE_PATH: /lien-vu/
+          # User site (lien-vu.github.io) is served from the domain root
+          BASE_PATH: /
         run: npm run build
 
       - name: Upload artifact
