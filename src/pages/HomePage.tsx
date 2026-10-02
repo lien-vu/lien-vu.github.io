@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="space-y-12">
       <Hero
         name="Lien Vu"
-        title="Ph.D. Candidate, Educational Statistics & Research Methods, University of Delaware"
+        title="Ph.D. Candidate, Educational Statistics & Research Methods, University of Delaware · Adjunct Faculty, Johns Hopkins University"
         subtitle="Research on STEM learning, educational neuroscience, and program evaluation"
       />
 

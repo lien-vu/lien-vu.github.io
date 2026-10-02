@@ -10,7 +10,7 @@ export default function ContactPage() {
         <div>North Wales, PA 19454</div>
         <div>215-237-7331</div>
         <div>
-          <a className="text-brand-700" href="mailto:lienvu@udel.edu">lienvu@udel.edu</a>
+          <a className="text-brand-700" href="mailto:lvu1@jh.edu">lvu1@jh.edu</a>
         </div>
       </div>
     </div>

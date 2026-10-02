@@ -15,7 +15,7 @@ export default function ConsultingPage() {
         <li>Professional development evaluation for STEM and literacy programs</li>
       </ul>
       <p className="text-gray-800">
-        Software: SAS, R, JASP, JAGS, STAN, STATA, MPlus, SPSS
+        Software: R (RStudio), Python, SAS, STATA, MPlus, HLM 7, JASP, JAGS, STAN, Dedoose, REDCap, Qualtrics, SPM12/MATLAB, FSL
       </p>
     </div>
   )

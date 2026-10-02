@@ -1,16 +1,18 @@
 import usePageTitle from '../ui/usePageTitle'
 
-const presentations = [
-  'Vu, L., May, H., Houang, R., Del-Tufo, S. (2025, July). Kumon: let’s read for fun!, Poster presented at the Society for the Scientific Study of Reading (SSSR) in Calgary, Canada.',
-  'Vu, L., Student, M. (2025, April). An Item-Level Investigation of the Impact of Kumon. Poster presented at the National Council on Measurement in Education. Denver, CO.',
-  'Vu, L., Houang, R., May, H., Ran., F. (2024, April). Evaluation of the Impacts of Kumon Using Propensity Score Matching. Paper presented at the Steel Symposium. Newark, DE.',
-  'Vu, L., Houang, R., May, H., Ran., F. (2024, April). Evaluation of the Impacts of Kumon Using Propensity Score Matching. Poster presented at the American Educational Research Association (AERA). Philadelphia, PA.',
-  'Vu, L., Preston, M., Delgado, A., Patt, R., Golinkoff, G. (2023, March). An International Study on Children’s and Adults’ Perception of Play. Poster presented at the Biennial Meeting of the Society for Research in Child Development. Salt Lake City, Utah.',
-  'Vu, L., Mouza, C. & Garvin, M. (2023). Examining Motivational Constructs in Computational Thinking for Preservice Teacher Development. In Elizabeth Langran (Ed.), Proceedings of SITE International Conference (pp. 106-112). New Orleans, LA: AACE.',
-  'Vu, L., Alkhateeb, B., Garvin, M., & Mouza, C. (2022, April). Using Word Clouds to Uncover Preservice Teachers’ Understanding of Computational Thinking in the Context of Teacher Education Coursework. SITE International Conference (pp. 1929-1937). San Diego, CA.',
-  'Vu, L., Bower, C., Evans, N., Zimmermann, L., Verdine, B., Toub, T. S., Foster, L., Islam, S., Golinkoff, R. M., Hirsh-Pasek, K. (2019, March). Growth curve modeling of preschoolers’ spatial skills during spatial training. Poster presented at SRCD. Baltimore, MD.',
-  'Vu, L., An International Comparison of Health Care Policy for Asian Ethnic Minorities, National Conferences on Undergraduate Research Proceedings, 1998. Presented at: National Undergraduate Research Conference',
-  'Vu, L., An International Comparison of Health Care Policy for Asian Ethnic Minorities, McNair Research Journal, 1998. Presented at: Ronald E. McNair Research Conference and Barth-Crapsey Research Conference',
+const conferencePresentations = [
+  'Vu, L., May, H., Houang, R., & Del Tufo, S.N. (2025, July 16-19). Kumon: let’s read for fun! [Conference Poster]. Society for the Scientific Study of Reading (SSSR), Calgary, Canada.',
+  'Lawrence, J., Vu, L., Henderson, A., Chavers, A., & Del Tufo, S.N. (2025, July 16-19). Computer-assisted intervention impact on reading outcomes in children with reading disabilities. [Conference Poster]. Society for the Scientific Study of Reading (SSSR), Calgary, Canada.',
+  'Vu, L., & Student, M. (2025, April 23-26). An Item-Level Investigation of the Impact of Kumon. [Conference Poster]. National Council on Measurement in Education (NCME), Denver, CO.',
+  'Vu, L., Houang, R., May, H., & Ran, F. (2024, April 11-14). Evaluation of the Impacts of Kumon Using Propensity Score Matching. [Conference Poster]. American Educational Research Association (AERA), Philadelphia, PA.',
+  'Vu, L., Preston, M., Delgado, A., Patt, R., & Golinkoff, G. (2023, March 23-25). An International Study on Children’s and Adults’ Perception of Play. [Conference Poster]. Society for Research in Child Development (SRCD), Salt Lake City, UT.',
+  'Vu, L., Bower, C., Evans, N., Zimmermann, L., Verdine, B., Toub, T. S., Foster, L., Islam, S., Golinkoff, R. M., & Hirsh-Pasek, K. (2019, March 21-23). Growth curve modeling of preschoolers’ spatial skills during spatial training. [Conference Poster]. Society for Research in Child Development (SRCD), Baltimore, MD.',
+]
+
+const otherPresentations = [
+  'Vu, L., Houang, R., May, H., & Ran, F. (2024, April 19). Evaluation of the Impacts of Kumon Using Propensity Score Matching. [Paper Presentation – 1st place winner]. 39th Annual Marion H. Steele Research Symposium, Newark, DE.',
+  'Vu, L. (1998, April 23-25). An International Comparison of Health Care Policy for Asian Ethnic Minorities. National Conferences on Undergraduate Research Proceedings. [Paper Presentation]. 12th National Undergraduate Research Conference, Salisbury, MD.',
+  'Vu, L. (1998). An International Comparison of Health Care Policy for Asian Ethnic Minorities. McNair Research Journal. [Paper Presentation]. Ronald E. McNair Research Conference and Barth-Crapsey Research Conference, Rochester, NY.',
 ]
 
 export default function PresentationsPage() {
@@ -36,9 +38,28 @@ export default function PresentationsPage() {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Presentations</h2>
+        <h2 className="text-xl font-semibold">Invited Talks</h2>
+        <div className="mt-4 text-gray-800">
+          <div className="font-medium">Exploring the Relationship Between Dosage and Working Memory</div>
+          <div className="text-sm text-gray-700 mt-1">
+            March 2026 — Education and Brain Sciences Research Lab (EBRL), Peabody College of Education at Vanderbilt University, Nashville, TN
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold">National and International Conference Presentations</h2>
         <ul className="mt-4 space-y-3 text-gray-800">
-          {presentations.map((p) => (
+          {conferencePresentations.map((p) => (
+            <li key={p}>{p}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold">Other Presentations</h2>
+        <ul className="mt-4 space-y-3 text-gray-800">
+          {otherPresentations.map((p) => (
             <li key={p}>{p}</li>
           ))}
         </ul>
@@ -46,5 +67,3 @@ export default function PresentationsPage() {
     </div>
   )
 }
-
-
