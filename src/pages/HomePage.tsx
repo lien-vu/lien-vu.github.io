@@ -44,7 +44,7 @@ export default function HomePage() {
 
       <section className="bg-white/80 rounded-xl p-6 ring-1 ring-brand-100 shadow-sm">
         <p className="text-sm text-ink-700">
-          Currently based in North Wales, PA. Open to research collaborations and consulting projects in education and learning sciences.
+          Currently based in the Baltimore/Philadelphia/NYC region. Open to research collaborations and consulting projects in education and learning sciences.
         </p>
       </section>
     </div>
