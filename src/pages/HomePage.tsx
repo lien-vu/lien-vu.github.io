@@ -14,13 +14,13 @@ export default function HomePage() {
 
       <section className="grid md:grid-cols-3 gap-6">
         <Card
-          title="Research Focus"
+          title="Honors"
           items={[
-            'Statistical analysis of STEM learning interventions and PD',
-            'Educational neuroscience and cognitive development',
-            'Evidence-based instructional principles',
+            'Doctoral Fellowship for Excellence, University of Delaware (2026)',
+            'First Place Graduate Paper, Steele Symposium, University of Delaware (2024)',
+            'Delegate, Kakehashi Project, Asian Pacific American Institute for Congressional Studies (2023)',
           ]}
-          cta={{ to: '/research', label: 'Explore research' }}
+          cta={{ to: '/awards', label: 'See all awards' }}
         />
         <Card
           title="Publications"
@@ -29,16 +29,16 @@ export default function HomePage() {
             'Young Children (NAEYC)',
             'Early Childhood Research Quarterly',
           ]}
-          cta={{ to: '/publications', label: 'See publications' }}
+          cta={{ to: '/research', label: 'See publications' }}
         />
         <Card
-          title="Consulting"
+          title="Teaching"
           items={[
-            'Program evaluation and impact analysis',
-            'Measurement and assessment',
-            'Statistical modeling and design',
+            'Adjunct Faculty/Instructor of Record, Johns Hopkins University',
+            'Learning Sciences Studios: Theory, Analysis, and Ed Tech Design (Fall 2026)',
+            'Explorations in Mind, Brain, and Teaching (Summer 2026)',
           ]}
-          cta={{ to: '/consulting', label: 'Work together' }}
+          cta={{ to: '/teaching', label: 'See teaching' }}
         />
       </section>
 

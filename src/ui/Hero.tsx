@@ -30,7 +30,7 @@ export default function Hero({ name, title, subtitle, imageUrl }: HeroProps) {
           <img
             src={imgSrc}
             alt={`${name} headshot`}
-            className="w-44 h-44 sm:w-52 sm:h-52 rounded-full object-cover ring-4 ring-brand-100 shadow-lg shadow-brand-100/50 transition-transform duration-300 hover:scale-[1.02]"
+            className="w-44 h-44 sm:w-52 sm:h-52 rounded-full object-cover object-[50%_20%] ring-4 ring-brand-100 shadow-lg shadow-brand-100/50 transition-transform duration-300 hover:scale-[1.02]"
             onError={() => setImgSrc(defaultImg)}
             width={208}
             height={208}

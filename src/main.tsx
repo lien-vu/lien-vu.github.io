@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import './styles.css'
 import AppLayout from './ui/AppLayout'
 import HomePage from './pages/HomePage'
 import ResearchPage from './pages/ResearchPage'
-import PublicationsPage from './pages/PublicationsPage'
-import PresentationsPage from './pages/PresentationsPage'
 import ExperiencePage from './pages/ExperiencePage'
+import AwardsPage from './pages/AwardsPage'
+import TeachingPage from './pages/TeachingPage'
 import ServicePage from './pages/ServicePage'
 import ConsultingPage from './pages/ConsultingPage'
 import ContactPage from './pages/ContactPage'
@@ -20,9 +20,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'research', element: <ResearchPage /> },
-      { path: 'publications', element: <PublicationsPage /> },
-      { path: 'presentations', element: <PresentationsPage /> },
+      { path: 'publications', element: <Navigate to="/research" replace /> },
+      { path: 'presentations', element: <Navigate to="/research" replace /> },
       { path: 'experience', element: <ExperiencePage /> },
+      { path: 'awards', element: <AwardsPage /> },
+      { path: 'teaching', element: <TeachingPage /> },
       { path: 'service', element: <ServicePage /> },
       { path: 'consulting', element: <ConsultingPage /> },
       { path: 'contact', element: <ContactPage /> },

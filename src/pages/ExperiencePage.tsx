@@ -2,7 +2,7 @@ import usePageTitle from '../ui/usePageTitle'
 
 type Item = { label: string; years: string }
 
-const academicPositions: { title: string; items: Item[] }[] = [
+const recentPositions: { title: string; items: Item[] }[] = [
   {
     title: 'Adjunct Faculty/Instructor of Record, Johns Hopkins University',
     items: [
@@ -63,9 +63,9 @@ export default function ExperiencePage() {
   return (
     <div className="space-y-10">
       <section>
-        <h2 className="text-xl font-semibold">Academic Positions</h2>
+        <h2 className="text-xl font-semibold">Recent Positions</h2>
         <ul className="mt-4 space-y-4">
-          {academicPositions.map((p) => (
+          {recentPositions.map((p) => (
             <li key={p.title} className="border rounded-lg p-4">
               <div className="font-medium">{p.title}</div>
               <ul className="mt-2 space-y-1">

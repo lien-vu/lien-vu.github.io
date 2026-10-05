@@ -1,6 +1,14 @@
 import { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
+const navItems = [
+  { to: '/', label: 'Home' },
+  { to: '/research', label: 'Research' },
+  { to: '/experience', label: 'Experience' },
+  { to: '/awards', label: 'Awards' },
+  { to: '/cv', label: 'CV' },
+]
+
 export default function AppLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   return (
@@ -11,14 +19,9 @@ export default function AppLayout() {
             Lien Vu
           </NavLink>
           <nav className="hidden md:flex gap-6 text-sm">
-            <NavLink to="/research" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Research</NavLink>
-            <NavLink to="/publications" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Publications</NavLink>
-            <NavLink to="/presentations" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Presentations</NavLink>
-            <NavLink to="/experience" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Experience</NavLink>
-            <NavLink to="/service" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Service</NavLink>
-            <NavLink to="/consulting" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Consulting</NavLink>
-            <NavLink to="/contact" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>Contact</NavLink>
-            <NavLink to="/cv" className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>CV</NavLink>
+            {navItems.map((item) => (
+              <NavLink key={item.to} to={item.to} end={item.to === '/'} className={({isActive})=> `hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`}>{item.label}</NavLink>
+            ))}
           </nav>
           <button
             type="button"
@@ -36,14 +39,9 @@ export default function AppLayout() {
         {isMobileMenuOpen && (
           <nav id="mobile-nav" className="md:hidden border-t bg-white/90">
             <div className="mx-auto max-w-6xl px-4 py-2 flex flex-col text-sm">
-              <NavLink to="/research" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Research</NavLink>
-              <NavLink to="/publications" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Publications</NavLink>
-              <NavLink to="/presentations" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Presentations</NavLink>
-              <NavLink to="/experience" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Experience</NavLink>
-              <NavLink to="/service" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Service</NavLink>
-              <NavLink to="/consulting" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Consulting</NavLink>
-              <NavLink to="/contact" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>Contact</NavLink>
-              <NavLink to="/cv" className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>CV</NavLink>
+              {navItems.map((item) => (
+                <NavLink key={item.to} to={item.to} end={item.to === '/'} className={({isActive})=> `py-2 hover:text-brand-700 transition-colors ${isActive? 'text-brand-700 font-medium':'text-ink-600'}`} onClick={()=> setIsMobileMenuOpen(false)}>{item.label}</NavLink>
+              ))}
             </div>
           </nav>
         )}
